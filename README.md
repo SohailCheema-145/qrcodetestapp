@@ -62,6 +62,3 @@ Connect an Android device or use an emulator to run the app.
 
 Contributing
 Feel free to submit issues, suggest improvements, or make pull requests. Please ensure that any contributions adhere to the project's coding standards and guidelines.
-
-License
-This project is licensed under the MIT License.
