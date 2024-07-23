@@ -49,7 +49,7 @@ The application is structured using the **MVVM (Model-View-ViewModel)** architec
 1. **Clone the Repository**:
 
     ```bash
-    git clone [https://github.com/yourusername/qrcodetestapp.git](https://github.com/SohailCheema-145/qrcodetestapp.git)
+    git clone https://github.com/SohailCheema-145/qrcodetestapp.git
     ```
 
 2. **Navigate to the Project Directory**:
