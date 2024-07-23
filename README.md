@@ -1,64 +1,83 @@
-                                                                                    **QR Code Test App**
-**Overview**
-The QR Code Test App is an Android application designed to detect QR codes from video streams. It utilizes the ExoPlayer library for video playback and the Google Vision API for QR code detection. This app showcases the integration of modern Android architecture components and dependency injection using Hilt.
+# **QR Code Detection Android App**
 
-Features
-Video Playback: Streams video content using ExoPlayer.
-QR Code Detection: Detects QR codes in video frames in real-time using Google Vision API.
-Loading and Error Handling: Displays loading indicators and handles network errors gracefully.
-Architecture
-The app follows the MVVM (Model-View-ViewModel) architecture pattern combined with Clean Architecture principles. Here’s a brief overview:
+## **Project Overview**
 
-Model: Represents the data layer, including repository classes and data sources. The QRCodeRepository interacts with the Google Vision API to extract and detect QR codes from video frames.
-View: Represents the UI components, implemented using Jetpack Compose. The VideoPlayerWithQRDetection composable displays the video player and detected QR codes.
-ViewModel: Contains business logic and state management. The QRCodeViewModel handles video processing, QR code detection, and communicates with the UI.
-Dependencies
-The app uses several third-party libraries and tools:
+The QR Code Detection Android App is an application designed to detect QR codes from a video stream using the Google ML Kit's Barcode Scanning API. This project showcases the integration of various technologies and libraries to achieve real-time QR code detection.
 
-Hilt: Dependency injection library for Android. It simplifies the process of providing dependencies across the app and managing their lifecycle.
+## **Features**
 
-Annotation Processor: dagger.hilt.android:hilt-android-compiler for generating code.
-Hilt Android Components: dagger.hilt.android:hilt-android for integrating Hilt with Android components.
-Google ML Kit - Barcode Scanning: Provides advanced barcode and QR code detection capabilities.
+- **Video Playback**: Uses ExoPlayer for smooth video playback.
+- **QR Code Detection**: Real-time detection of QR codes in video frames.
+- **UI Components**: Displays detected QR codes and provides feedback on video loading and playback status.
 
-ML Kit Vision API: com.google.mlkit:barcode-scanning for QR code detection.
-ExoPlayer: A powerful media player library for Android that supports a wide range of media formats and streaming protocols.
+## **Technologies and Libraries**
 
-Core ExoPlayer: com.google.android.exoplayer:exoplayer-core
-UI Components: com.google.android.exoplayer:exoplayer-ui
-Jetpack Compose: A modern toolkit for building native UI with Kotlin.
+### **1. Hilt**
 
-Material3: androidx.compose.material3:material3
-UI Toolkit: androidx.compose.ui:ui-tooling-preview
-Architecture and Framework
-MVVM Pattern
-Model: Encapsulates the data layer. For this app, the QRCodeRepository class handles the extraction of video frames and QR code detection.
-View: Composed of UI elements defined using Jetpack Compose. The VideoPlayerWithQRDetection composable manages video playback and displays detected QR codes.
-ViewModel: Manages UI-related data and business logic. The QRCodeViewModel interacts with the repository to perform QR code detection and maintains UI state.
-Clean Architecture
-Separation of Concerns: Clear separation between data, domain, and presentation layers. This improves maintainability and testability.
-Dependency Injection: Hilt is used to manage dependencies and provide them to the ViewModel and repository.
-Getting Started
-Prerequisites
-Android Studio: Ensure you have the latest version of Android Studio.
-Kotlin: The app is written in Kotlin.
-Installation
-Clone the Repository
+- **Description**: A dependency injection library for Android that simplifies Dagger setup.
+- **Usage**: Provides dependencies like `QRCodeRepository` and `BarcodeScanner`.
 
-bash
-Copy code
-git clone https://github.com/SohailCheema-145/qrcodetestapp.git
-Open in Android Studio
+### **2. Google ML Kit**
 
-Open the project in Android Studio.
+- **Description**: Google's machine learning library for mobile apps.
+- **Usage**: Utilized the Barcode Scanning API for QR code detection.
 
-Build the Project
+### **3. ExoPlayer**
 
-Use the build tools provided by Android Studio to build the project.
+- **Description**: A powerful media player library for Android.
+- **Usage**: Handles video playback within the application.
 
-Run the App
+### **4. Jetpack Compose**
 
-Connect an Android device or use an emulator to run the app.
+- **Description**: Android’s modern toolkit for building native UI.
+- **Usage**: Creates UI components such as video player and QR code display.
 
-Contributing
-Feel free to submit issues, suggest improvements, or make pull requests. Please ensure that any contributions adhere to the project's coding standards and guidelines.
+## **Architecture**
+
+The application is structured using the **MVVM (Model-View-ViewModel)** architecture with the following components:
+
+- **Model**: Manages data and business logic. In this app, it includes the `QRCodeRepository` which handles QR code detection and video frame extraction.
+- **View**: The UI components created with Jetpack Compose, including the `VideoPlayerWithQRDetection` composable function.
+- **ViewModel**: Acts as a bridge between the Model and View, providing data and handling business logic. The `QRCodeViewModel` manages video playback state and QR code detection logic.
+
+### **Dependency Injection**
+
+- **Hilt** is used to inject dependencies such as `QRCodeRepository` and `BarcodeScanner` into the ViewModel.
+
+## **Setup and Installation**
+
+1. **Clone the Repository**:
+
+    ```bash
+    git clone https://github.com/yourusername/qrcodetestapp.git
+    ```
+
+2. **Navigate to the Project Directory**:
+
+    ```bash
+    cd qrcodetestapp
+    ```
+
+3. **Open the Project in Android Studio**:
+    - Open Android Studio and select "Open an existing project".
+    - Navigate to the cloned project directory and open it.
+
+4. **Build the Project**:
+    - Sync the project with Gradle files.
+    - Build and run the project on an Android device or emulator.
+
+## **Usage**
+
+- **Run the App**: Launch the app on a device or emulator.
+- **View QR Codes**: The app will automatically start detecting QR codes from the provided video URL.
+
+## **Contributing**
+
+- **Fork** the repository and **create** a new branch for your changes.
+- **Submit** a pull request with a description of your changes.
+
+## **Acknowledgements**
+
+- **Google ML Kit**: For the barcode scanning capabilities.
+- **ExoPlayer**: For media playback.
+- **Jetpack Compose**: For building the UI.
