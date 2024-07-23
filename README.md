@@ -1,5 +1,5 @@
-QR Code Test App
-Overview
+                                                                                    **QR Code Test App**
+**Overview**
 The QR Code Test App is an Android application designed to detect QR codes from video streams. It utilizes the ExoPlayer library for video playback and the Google Vision API for QR code detection. This app showcases the integration of modern Android architecture components and dependency injection using Hilt.
 
 Features
